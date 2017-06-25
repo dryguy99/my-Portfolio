@@ -1,8 +1,26 @@
 body,h1,h2,h3,h4,h5 {
   font-family: "Raleway", sans-serif
 }
+.mybackground {
+  background: url('../images/whitey.png');
+}
+.mycolor {
+  background: #0033cc;
+}
+.w3-text-grey {
+  color: #3f51b5;
+}
+.nav-fade li {
+   background: #fff;
+   padding: 3px 8px;
+   display: inline-block;
+   transition: background 1.50s ease-in-out;
+   -moz-transition: background 1.50s ease-in-out;
+   -webkit-transition: background 1.50s ease-in-out;
+   }
 
-
-
+.nav-fade li:hover {
+      background: #ddd;
+      }
 .w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
 .w3-third img:hover{opacity: 1}
