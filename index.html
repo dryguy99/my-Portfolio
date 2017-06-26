@@ -4,7 +4,7 @@
     <link rel="icon" href="assets/images/favicon.ico">
     <title>Timothy Dry | Portfolio</title>
     <meta charset="UTF-8">
-
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -15,6 +15,7 @@
       integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg="
       crossorigin="anonymous"></script>
     <script type="text/javascript" language="javascript" src="./assets/javascript/app.js"> </script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
   </head>
 
 <body class="w3-light-blue w3-content" style="max-width:1600px">
@@ -79,7 +80,7 @@
           <!-- <a id="mylink" target="_blank"> -->
             <!-- <h3 class="w3-center w3-margin-top">click to visit the app!</h3> -->
             <div id='mymodal' class="w3-modal-content w3-animate-zoom w3-center w3-transparent">
-              <iframe id="myiframe" class="" style="width:65vw;height:50vw"></iframe>
+              <iframe id="myiframe" placeholder="please wait while application wakes up and loades." class="" style="width:65vw;height:50vw"></iframe>
               <!-- <img id="img01" class="w3-image"> -->
               <!-- <p id="caption"></p> -->
             </div>
@@ -154,7 +155,7 @@
         <div class="w3-content" style="max-width:600px">
           <h4 class="w3-center"><b>Contact Me</b></h4>
           <p>Want to meet with me? Fill out the form and fill me in with the details :) I love meeting new people!</p>
-          <form name="contact_form" class="contactform" method="post" onsubmit="return validateForm()"  action="./assets/sendEmail.php">
+          <form name="contact_form" class="contactform w3-center" method="post" onsubmit="return validateForm()"  ><!--action="./assets/sendEmail.php"-->
             <div class="w3-section">
               <label>Name</label>
               <input class="w3-input w3-border" type="text" name="Name" required>
@@ -168,14 +169,35 @@
               <input class="w3-input w3-border" type="text" name="Message" required>
             </div>
             <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Send Message</button>
-          </form>
+
+                  <div class="g-recaptcha w3-center" style="margin-left:9.7vw" data-sitekey="6LcA8iYUAAAAANFAEtGIAhVZnhDnLzz8QaQSPpf3"></div>
+              </form>
+              <div id="status"></div>
+          </div>
+        </div>
+
+        <div class='row'>
+        <div class="col-xs-12 col-md-4 mypanel">
+          <a href="https://github.com/dryguy99?tab=repositories" style="margin-left:3vw;border:none"  target="_blank" class="w3-light-blue thumbnail myframe">
+            <img src="assets/images/github-128.png" style="max-height:120px" alt="GitHub">
+          </a>
+        </div>
+        <div class="col-xs-12 col-md-4 mypanel">
+          <a href="https://www.linkedin.com/in/timothy-dry-5351b719" style="margin-left:3vw;border:none" target="_blank" class="w3-light-blue thumbnail myframe">
+            <img src="assets/images/linkedin-128.png" style="max-height:120px" alt="LinkedIn">
+          </a>
+        </div>
+        <div class="col-xs-12 col-md-4 mypanel">
+          <a href="http://stackoverflow.com/users/7416751/tim?tab=profile" style="margin-left:3vw;border:none"  target="_blank" class="w3-light-blue thumbnail myframe">
+            <img src="assets/images/stackoverflow-128.png" style="max-height:120px" alt="Stack Overflow">
+          </a>
         </div>
       </div>
 
 
-
         <div class="w3-indigo w3-center w3-padding-24">
-          <div class="col-sm-12 text-center">
+
+          <div class="col-sm-12 w3-center text-center">
             <a id="me" href="https://timothy-dry.herokuapp.com"<h4>Copyright &copy; 2017 Timothy Dry</h4></a>
           </div><br />
           Powered by
@@ -185,6 +207,7 @@
 
     <!-- End page content -->
     </div>
+
 
   </body>
 </html>

@@ -7,6 +7,9 @@ body,h1,h2,h3,h4,h5 {
 .w3-text-grey {
   color: #3f51b5;
 }
+.mypanel, myframe {
+  background: lightblue;
+}
 img > .myapp {
   margin-bottom: 2vw;
 }
