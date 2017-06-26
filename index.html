@@ -4,10 +4,11 @@
     <link rel="icon" href="assets/images/favicon.ico">
     <title>Timothy Dry | Portfolio</title>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-
+    <?php require './assets/sendEmail.php';?>
     <link rel="stylesheet" src="./assets/css/styles.css">
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.js"
@@ -16,8 +17,7 @@
     <script type="text/javascript" language="javascript" src="./assets/javascript/app.js"> </script>
   </head>
 
-<body class="w3-light-grey w3-content" style="max-width:1600px">
-
+<body class="w3-light-blue w3-content" style="max-width:1600px">
   <!-- Sidebar/menu -->
   <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center mybackground" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
     <h3 class="w3-padding-64 w3-center"><b>Timothy<br>Dry</b></h3>
@@ -37,7 +37,7 @@
     <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
       <!-- !PAGE CONTENT! -->
-      <div class="w3-main" style="margin-left:300px">
+      <div class="w3-main mybackground" style="margin-left:300px">
 
         <!-- Push down content on small screens -->
         <div class="w3-hide-large" style="margin-top:83px"></div>
@@ -45,18 +45,18 @@
         <!-- Photo grid -->
         <div class="w3-row">
           <div class="w3-third mybackground">
-            <img class='myapp' src="./assets/images/flashcard.png" data-link="https://flashcard-dryguy.herokuapp.com/" style="width:95%" onclick="onClick(this)" alt="Flashcard Machine">
-            <img class='myapp' src="./assets/images/rpsls.png" data-link='https://rpsls-dryguy.herokuapp.com/' style="width:95%" onclick="onClick(this)" alt="Rock, Paper, Scissors, Lizard, Spock app">
+            <img class='w3-round-large' src="./assets/images/flashcard.jpeg" data-link="https://flashcard-dryguy.herokuapp.com/" style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Flashcard Machine">
+            <img class='w3-round-large' src="./assets/images/rpsls.jpeg"  data-link='https://rpsls-dryguy.herokuapp.com/' style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Rock, Paper, Scissors, Lizard, Spock app">
           </div>
 
           <div class="w3-third mybackground">
-            <img class='myapp' src="./assets/images/hangman.png" data-link="https://hangman-dryguy.herokuapp.com/" style="width:95%" onclick="onClick(this)" alt="Hangman">
-            <img class='myapp' src="./assets/images/trivia.png" data-link='https://trivia-dryguy.herokuapp.com/' style="width:95%" onclick="onClick(this)" alt="Play Music Trivia">
+            <img class='w3-round-large' src="./assets/images/hangman.jpeg" data-link="https://hangman-dryguy.herokuapp.com/" style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Hangman">
+            <img class='w3-round-large' src="./assets/images/trivia.jpeg" data-link='https://trivia-dryguy.herokuapp.com/' style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Play Music Trivia">
           </div>
 
           <div class="w3-third mybackground">
-            <img class='myapp' src="./assets/images/openfridge.png" data-link="https://open-fridge.herokuapp.com/" style="width:95%" onclick="onClick(this)" alt="Open Fridge App">
-            <img class='myapp' src="./assets/images/giphy.png" data-link="https://giphy-dryguy.herokuapp.com/" style="width:95%" onclick="onClick(this)" alt="Find moving images app">
+            <img class='w3-round-large' src="./assets/images/openfridge.jpeg" data-link="https://open-fridge.herokuapp.com/" style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Open Fridge App">
+            <img class='w3-round-large' src="./assets/images/giphy.jpeg" data-link="https://giphy-dryguy.herokuapp.com/" style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Find moving images app">
           </div>
         </div>
 
@@ -76,64 +76,85 @@
         <div id="modal01" class="w3-modal w3-blue" style="padding-top:0" onclick="this.style.display='none'">
           <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
 
-          <a id="mylink" target="_blank">
-            <h3 class="w3-center w3-margin-top">click to visit the app!</h3>
-            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-              <img id="img01" class="w3-image">
-              <p id="caption"></p>
+          <!-- <a id="mylink" target="_blank"> -->
+            <!-- <h3 class="w3-center w3-margin-top">click to visit the app!</h3> -->
+            <div id='mymodal' class="w3-modal-content w3-animate-zoom w3-center w3-transparent">
+              <iframe id="myiframe" class="" style="width:65vw;height:50vw"></iframe>
+              <!-- <img id="img01" class="w3-image"> -->
+              <!-- <p id="caption"></p> -->
             </div>
-          </a>
+          <!-- </a> -->
         </div>
 
         <!-- About section -->
         <div class="w3-container w3-center w3-text-light-grey w3-padding-32 w3-indigo" id="about">
           <h4><b>About Me</b></h4>
-          <img src="./assets/images/timothy-dry.png" alt="Timothy Dry" class="w3-image w3-padding-32" style="border-radius: 9vw" width="600" height="650">
+          <img src="./assets/images/timothy-dry.jpeg" alt="Timothy Dry" class="w3-image w3-padding-32" style="border-radius: 9vw" width="600" height="650">
           <div class="w3-content w3-justify" style="max-width:600px">
             <h4>Timothy Dry</h4>
             <p>A Web Developer, People Person, Swim Coach, Aquatics Expert and Outdoorsman who likes to travel are just some of the ways to describe me. I fell in love with computers early in life and through the Rutgers Coding Bootcamp, I now know website development.  I spent 28 years working for a non-profit where I started as an Instructor, finished as an Executive Director and always found ways to keep up with technology.  I believe learning is lifelong and I like being on the cutting edge.
 
             </p>
-            <p>mail: timothy.dry@verizon.net</p>
+            <p>location: Branchburg, NJ</p>
             <p>tel: 908-642-3420</p>
             <hr class="w3-opacity">
             <h4 class="w3-padding-16">Technical Skills</h4>
-            <p class="w3-wide">HTML</p>
+            <p class="w3-wide">HTML/5</p>
             <div class="w3-white">
               <div class="w3-container w3-padding-small w3-center w3-light-blue" style="width:100%">100%</div>
             </div>
-            <p class="w3-wide">CSS</p>
+            <p class="w3-wide">CSS/3</p>
             <div class="w3-white">
               <div class="w3-container w3-padding-small w3-center w3-light-blue" style="width:100%">100%</div>
             </div>
             <p class="w3-wide">Javascript</p>
             <div class="w3-white">
-              <div class="w3-container w3-padding-small w3-center w3-light-blue" style="width:97%">97%</div>
+              <div class="w3-container w3-padding-small w3-center w3-light-blue" style="width:100%">100%</div>
             </div>
-            <p class="w3-wide">Node.js</p>
+            <p class="w3-wide">NodeJS</p>
             <div class="w3-white">
-              <div class="w3-container w3-padding-small w3-center w3-light-blue" style="width:95%">95%</div>
+              <div class="w3-container w3-padding-small w3-center w3-light-blue" style="width:99%">99%</div>
             </div>
             <p class="w3-wide">jQuery</p>
             <div class="w3-white">
               <div class="w3-container w3-padding-small w3-center w3-light-blue" style="width:100%">100%</div>
             </div>
+            <p class="w3-wide">Magento</p>
+            <div class="w3-white">
+              <div class="w3-container w3-padding-small w3-center w3-light-blue" style="width:20%">20%</div>
+            </div>
             <p class="w3-wide">Bootstrap</p>
             <div class="w3-white">
               <div class="w3-container w3-padding-small w3-center w3-light-blue" style="width:100%">100%</div>
             </div>
+            <p class="w3-wide">AngularJS</p>
+            <div class="w3-white">
+              <div class="w3-container w3-padding-small w3-center w3-light-blue" style="width:87%">87%</div>
+            </div>
+            <p class="w3-wide">PHP</p>
+            <div class="w3-white">
+              <div class="w3-container w3-padding-small w3-center w3-light-blue" style="width:90%">90%</div>
+            </div>
+            <p class="w3-wide">MySQL</p>
+            <div class="w3-white">
+              <div class="w3-container w3-padding-small w3-center w3-light-blue" style="width:90%">95%</div>
+            </div>
+            <p class="w3-wide">MongoDB</p>
+            <div class="w3-white">
+              <div class="w3-container w3-padding-small w3-center w3-light-blue" style="width:95%">95%</div>
+            </div>
             <p class="w3-center"><a href='https://docs.google.com/document/d/1LlPLsM5o6Nn7LL1jLhPOUokIOG_D1QhkU9Vt6sQsacU/edit?usp=sharing' <button class="w3-button w3-pale-blue w3-padding-large w3-margin-top w3-margin-bottom">Download Resume</button></a></p>
-            <hr class="w3-opacity">
+            <hr class="w3-opacity" />
 
         </div>
       </div>
 
       <!-- Contact section -->
-      <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+      <div class="w3-container w3-light-blue w3-padding-32 w3-padding-large" id="contact">
         <div class="w3-content" style="max-width:600px">
           <h4 class="w3-center"><b>Contact Me</b></h4>
           <p>Want to meet with me? Fill out the form and fill me in with the details :) I love meeting new people!</p>
-          <form action="/action_page.php" target="_blank">
+          <form name="contact_form" class="contactform" method="post" onsubmit="return validateForm()"  action="./asstes/sendEmail.php">
             <div class="w3-section">
               <label>Name</label>
               <input class="w3-input w3-border" type="text" name="Name" required>
@@ -151,42 +172,7 @@
         </div>
       </div>
 
-      <!-- Footer -->
-      <!-- <footer class="w3-container w3-padding-32 w3-indigo">
-        <div class="w3-row-padding">
-          <div class="w3-third">
-            <h3>INFO</h3>
-            <p></p>
-          </div>
 
-          <div class="w3-third">
-            <h3></h3>
-            <ul class="w3-ul">
-              <li class="w3-padding-16 w3-hover-black">
-                <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-                <span class="w3-large"></span><br>
-                <span></span>
-              </li>
-              <li class="w3-padding-16 w3-hover-black">
-                <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-                <span class="w3-large"></span><br>
-                <span></span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="w3-third">
-            <h3></h3>
-            <p>
-              <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">London</span>
-              <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">DIY</span>
-              <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Family</span>
-              <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
-              <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Games</span>
-            </p>
-          </div>
-        </div>
-      </footer> -->
 
         <div class="w3-indigo w3-center w3-padding-24">
           <div class="col-sm-12 text-center">

@@ -1,9 +1,6 @@
 body,h1,h2,h3,h4,h5 {
   font-family: "Raleway", sans-serif
 }
-.mybackground {
-  background: url('../images/whitey.png');
-}
 .mycolor {
   background: #0033cc;
 }
@@ -12,6 +9,10 @@ body,h1,h2,h3,h4,h5 {
 }
 img > .myapp {
   margin-bottom: 2vw;
+}
+#mymodal {
+  width: 800px;
+  height: 400px;
 }
 .nav-fade li {
    background: #fff;
