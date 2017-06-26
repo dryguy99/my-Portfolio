@@ -16,7 +16,12 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+var link = "";
 
-$(document).on('click', '#mylink', function() {
+$(document).on('click', '.myapp', function() {
+
+  link = "";
+  link = $(this).attr('data-link');
+  $('#mylink').attr('href', link);
 
 });

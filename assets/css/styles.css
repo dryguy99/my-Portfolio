@@ -10,6 +10,9 @@ body,h1,h2,h3,h4,h5 {
 .w3-text-grey {
   color: #3f51b5;
 }
+img > .myapp {
+  margin-bottom: 2vw;
+}
 .nav-fade li {
    background: #fff;
    padding: 3px 8px;
