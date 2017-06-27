@@ -22,7 +22,7 @@ $(document).on('click', '.myapp', function() {
   link = "";
   link = $(this).attr('data-link');
   $('#myiframe').attr('src', link);
-
+  $('#mybtn').attr('href', link);
 });
 
 function validateForm()
