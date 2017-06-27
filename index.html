@@ -46,18 +46,18 @@
         <!-- Photo grid -->
         <div class="w3-row">
           <div class="w3-third mybackground">
-            <img class='w3-round-large myapp' src="./assets/images/flashcard.jpeg" data-link="https://flashcard-dryguy.herokuapp.com/" style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Flashcard Machine">
-            <img class='w3-round-large myapp' src="./assets/images/rpsls.jpeg"  data-link='https://rpsls-dryguy.herokuapp.com/' style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Rock, Paper, Scissors, Lizard, Spock app">
+            <img class='w3-round-large myapp' src="./assets/images/flashcard.jpeg" data-name="Flashcard Machine" data-link="https://flashcard-dryguy.herokuapp.com/" style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Flashcard Machine">
+            <img class='w3-round-large myapp' src="./assets/images/rpsls.jpeg" data-name='Rock Paper Scissors Lizard Spock' data-link='https://rpsls-dryguy.herokuapp.com/' style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Rock, Paper, Scissors, Lizard, Spock app">
           </div>
 
           <div class="w3-third mybackground">
-            <img class='w3-round-largen myapp' src="./assets/images/hangman.jpeg" data-link="https://hangman-dryguy.herokuapp.com/" style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Hangman">
-            <img class='w3-round-large myapp' src="./assets/images/trivia.jpeg" data-link='https://trivia-dryguy.herokuapp.com/' style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Play Music Trivia">
+            <img class='w3-round-largen myapp' src="./assets/images/hangman.jpeg" data-name='Movie Hangman' data-link="https://hangman-dryguy.herokuapp.com/" style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Hangman">
+            <img class='w3-round-large myapp' src="./assets/images/trivia.jpeg" data-name='Music Trivia' data-link='https://trivia-dryguy.herokuapp.com/' style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Play Music Trivia">
           </div>
 
           <div class="w3-third mybackground">
-            <img class='w3-round-large myapp' src="./assets/images/openfridge.jpeg" data-link="https://open-fridge.herokuapp.com/" style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Open Fridge App">
-            <img class='w3-round-large myapp' src="./assets/images/giphy.jpeg" data-link="https://giphy-dryguy.herokuapp.com/" style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Find moving images app">
+            <img class='w3-round-large myapp' src="./assets/images/openfridge.jpeg" data-name='Open Fridge' data-link="https://open-fridge.herokuapp.com/" style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Open Fridge App">
+            <img class='w3-round-large myapp' src="./assets/images/giphy.jpeg" data-name="Find Movie Moving Images" data-link="https://giphy-dryguy.herokuapp.com/" style="width:23vw;margin:2vw" onclick="onClick(this)" alt="Find moving images app">
           </div>
         </div>
 
@@ -80,7 +80,7 @@
           <!-- <a id="mylink" target="_blank"> -->
             <!-- <h3 class="w3-center w3-margin-top">click to visit the app!</h3> -->
             <div id='mymodal' class="w3-modal-content w3-animate-zoom w3-center w3-transparent">
-              <a id="mybtn" class="w3-button w3-circle w3-xlarge w3-indigo w3-ripple" target='_blank'><i>+ see site in new window</i></a>
+              <a id="mybtn" class="w3-button w3-xlarge w3-indigo w3-ripple w3-hover-red" target='_blank'><i id='myname'>see site in new window</i></a>
               <iframe id="myiframe" placeholder="please wait while application wakes up and loades." class="" style="width:65vw;height:50vw"></iframe>
 
               <!-- <img id="img01" class="w3-image"> -->

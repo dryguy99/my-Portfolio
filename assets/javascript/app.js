@@ -17,12 +17,17 @@ function onClick(element) {
   //captionText.innerHTML = element.alt;
 }
 var link = "";
+var name = "";
 
 $(document).on('click', '.myapp', function() {
   link = "";
+  name = "";
   link = $(this).attr('data-link');
+  name = "See " + $(this).attr('data-name') + " In A New Window";
+
   $('#myiframe').attr('src', link);
   $('#mybtn').attr('href', link);
+  $('#myname').html(name);
 });
 
 function validateForm()
